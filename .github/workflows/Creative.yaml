@@ -1,17 +1,13 @@
-name: Creative
-
-on: push
+name: Creative Workflow
+on: [push]
 
 jobs:
-  super-lint:
-    name: Lint code base
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Creative
-        uses: github/creative@v4
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Display a creative message
+        run: echo "Hello, this is a creative workflow!"
