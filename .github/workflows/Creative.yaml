@@ -26,6 +26,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Artwork Image
-        path: .github/workflows/Image.webp
+        path: .github/workflows/image1.jpg
         
     
