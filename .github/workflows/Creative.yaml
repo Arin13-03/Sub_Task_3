@@ -1,13 +1,26 @@
 name: Creative Workflow
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Display a creative message
-        run: echo "Hello, this is a creative workflow!"
+    - name: Display Creative Message
+      run: echo "This is a creative workflow! 🎉"
+
+    - name: Generate Artwork
+      run: |
+        echo "Creating artwork..."
+        # Add your own creative commands here
+        
+    - name: Publish Artwork
+      run: |
+        echo "Publishing artwork..."
